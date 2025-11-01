@@ -1,0 +1,20 @@
+{
+  "name": "pw-api-demo",
+  "version": "1.0.0",
+  "description": "API automation with playwright (TypeScript) using ReqRes public API",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test", 
+    "test:headed": "playwright test --headed", 
+    "test:ui": "playwright test --ui", 
+    "format": "npx prettier --write ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.56.1",
+    "@types/node": "^24.9.2"
+  }
+}
