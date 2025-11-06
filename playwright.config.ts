@@ -21,18 +21,21 @@ export default defineConfig({
   use: {
     // Point baseURL to ReqRes public API
     baseURL: "https://restful-booker.herokuapp.com",
-    extraHTTPHeaders: {"Accept": "application/json"},
+    extraHTTPHeaders: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+      Authorization: "Basic YWRtaW46cGFzc3dvcmQxMjM="
+    },
     headless: true,
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
     trace: 'on-first-retry',
   },
-  timeout: 30 * 1000,
 
   /* Browser configurations */
   projects: [
     { name: 'chromium', use: { ...devices['Desktop Chrome'] } },
     { name: 'firefox', use: { ...devices['Desktop Firefox'] } },
     { name: 'webkit', use: { ...devices['Desktop Safari'] } },
-  ],
+  ]
 });

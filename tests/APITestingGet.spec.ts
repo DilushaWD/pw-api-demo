@@ -1,4 +1,4 @@
-import { test, request, APIRequestContext} from '@playwright/test';
+import { test, request, APIRequestContext } from '@playwright/test';
 
 let reqcontext2: APIRequestContext
 test.beforeAll("Before all the Tests", async () => {
@@ -35,7 +35,7 @@ test("API Testing Get Prctice 3", async () => {
     console.log(await resp1.json());
 });
 
-test("API Testing Get Prctice 4", async ({request}) => {
+test("API Testing Get Prctice 4", async ({ request }) => {
     const resp1 = await reqcontext2.get("/booking");
     console.log(await resp1.json());
 });
